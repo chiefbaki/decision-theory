@@ -22,6 +22,7 @@ alt = data.values.tolist()
 
 
 def pareto_method(alt):
+    ''''''
     result = set()
     for i in range(len(alt)):
         for j in range(len(alt)):
@@ -30,7 +31,7 @@ def pareto_method(alt):
             if (alt[i][2] <= alt[j][2]) \
                     and (alt[i][3] <= alt[j][3]) \
                     and (alt[i][4] >= alt[j][4]) \
-                    and (alt[i][5] <= alt[j][5]):
+                    and (alt[i][5] >= alt[j][5]):
                 result.add(tuple(alt[i]))
     return result
 
